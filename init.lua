@@ -1,3 +1,4 @@
+
 vim.g.base46_cache = vim.fn.stdpath "data" .. "/base46/"
 vim.g.mapleader = " "
 
@@ -12,6 +13,7 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 local lazy_config = require "configs.lazy"
+
 
 -- load plugins
 require("lazy").setup({
@@ -31,7 +33,13 @@ dofile(vim.g.base46_cache .. "statusline")
 
 require "options"
 require "autocmds"
+require "plugins"
 
 vim.schedule(function()
   require "mappings"
 end)
+
+
+
+-- MUST come after mason setups
+-- require("lspconfig").lua_ls.setup({})

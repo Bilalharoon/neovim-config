@@ -8,8 +8,9 @@ return {
   -- These are some examples, uncomment them if you want to see them work!
   {
     "neovim/nvim-lspconfig",
+     event = { "BufReadPre", "BufNewFile" },
     config = function()
-      require "configs.lspconfig"
+      require("configs.lspconfig")
     end,
   },
 
