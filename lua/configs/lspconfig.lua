@@ -1,8 +1,7 @@
 require("nvchad.configs.lspconfig").defaults()
 
-print("hello from lspconfig")
 -- local lspconfig = require "lspconfig"
-local servers = { "html", "cssls", "lua_ls", "pyright", "gopls"} -- Add your LSP here
+local servers = { "html", "cssls", "lua_ls", "pyright", "gopls", "clangd"} -- Add your LSP here
 
 
 vim.lsp.enable(servers)
