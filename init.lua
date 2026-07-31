@@ -40,7 +40,7 @@ vim.schedule(function()
   require "mappings"
 end)
 
-
+vim.cmd([[colorscheme tokyonight-storm]])
 
 -- MUST come after mason setups
 -- require("lspconfig").lua_ls.setup({})
