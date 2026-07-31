@@ -25,7 +25,7 @@ require("codecompanion").setup {
           return require("codecompanion.adapters").extend("ollama", {
             schema = {
               model = {
-                default = "qwen2.5-coder:7b", -- Replace with your preferred downloaded Ollama model
+                default = "qwen3.5", -- Replace with your preferred downloaded Ollama model
               },
             },
           })

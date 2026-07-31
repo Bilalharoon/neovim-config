@@ -36,7 +36,27 @@ return {
   config = function()
     require "configs.codecompanionconfig"
   end,
+},
+
+{
+    'MeanderingProgrammer/render-markdown.nvim',
+    ft = {"markdown", "codecompanion"},
+    dependencies = { 'nvim-treesitter/nvim-treesitter', "nvim-tree/nvim-web-devicons"},            -- if you use the mini.nvim suite
+    lazy=false,
+-- bootstrap lazy and all plugins
+    -- dependencies = { 'nvim-treesitter/nvim-treesitter', 'nvim-mini/mini.icons' },        -- if you use standalone mini plugins
+    -- dependencies = { 'nvim-treesitter/nvim-treesitter', 'nvim-tree/nvim-web-devicons' }, -- if you prefer nvim-web-devicons
+    ---@module 'render-markdown'
+    ---@type render.md.UserConfig
+    
+    opts = {
+      preset='obsidian',
+
+      render_modes=true,
+      
+    },
 }
+
 
   -- test new blink
   -- { import = "nvchad.blink.lazyspec" },

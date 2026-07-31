@@ -7,3 +7,12 @@ autocmd("FileType", {
 })
 
 
+vim.api.nvim_create_autocmd("FileType", {
+  pattern = "codecompanion",
+  callback = function()
+    vim.treesitter.start()
+  end,
+})
+
+
+
