@@ -13,17 +13,17 @@ autocmd("FileType", {
     vim.treesitter.start()
   end,
 })
-
-autocmd("ColorScheme", {
-  pattern="*",
-  callback= function()
-    vim.api.nvim_set_hl(0, "IblChar", {link="Whitespace"})
-    vim.api.nvim_set_hl(0, "IblScopeChar", {link="Whitespace"})
-  end
-})
-
+--
+-- autocmd("ColorScheme", {
+--   pattern="*",
+--   callback= function()
+--     vim.api.nvim_set_hl(0, "IblChar", {link="Whitespace"})
+--     vim.api.nvim_set_hl(0, "IblScopeChar", {link="Whitespace"})
+--   end
+-- })
+--
 autocmd("User", {
-  pattern = "NvimTreeSetup", -- Fires exactly once when the plugin finishes initializing
+  pattern = "NvimTreeSetup", 
   once = true,
   callback = function()
     print("tree ready")
